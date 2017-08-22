@@ -328,7 +328,7 @@ class AddrDetection(Plugin):
                     ' address posted on slack*.']
 
             #Deleting message
-            self.delete(data, msg[0], warning = True)
+            self.delete(data, )
             return True
 
         #BTC address detection
@@ -338,10 +338,10 @@ class AddrDetection(Plugin):
             #Message to post in channel
             msg  = [' *<@{}>* posted an ETH address and'.format(userID) + 
                     ' the message was deleted. *Do NOT trust any '      +
-                    ' address posted on slac*.']
+                    ' address posted on slack*.']
 
             #Deleting message
-            self.delete(data, msg[0], warning = True)
+            self.delete(data, )
             return True
 
         return False
